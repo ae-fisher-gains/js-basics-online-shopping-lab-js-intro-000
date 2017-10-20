@@ -32,12 +32,10 @@ function viewCart() {
   else {
     var cartContains = [];
     var cartCost = [];
-    for (var i = 0; i <= cart.length; i++) {
-      cartContains.push(Object.keys(cart[i]));
-  }
-    for (var i = 0; i <= cartContains.length; i++) {
-      cartCost.push(cartKeys[i]);
-  }
+    for each (var item in cart) {
+      cartContains.push(Object.keys(item))
+      return cartContains
+    }
     console.log(`In your cart, you have ${cartContains[0]} at $${cartCost[0]}.`)
   }
 }
