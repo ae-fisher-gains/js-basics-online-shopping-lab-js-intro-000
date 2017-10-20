@@ -38,6 +38,7 @@ function viewCart() {
     }
     for (var item in cartContains) {
       cartCost.push(cart[item])
+      return cartCost
     }
     console.log(`In your cart, you have ${cartContains[0]} at $${cartCost[0]}.`)
   }
