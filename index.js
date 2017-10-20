@@ -77,7 +77,7 @@ for (var i = 0; i < cart.length; i++) {
     return cart
   } else {
     itemIndex = cartContains.indexOf(item)
-    cart.splice([itemIndex], 1)
+    cart.splice(itemIndex, 1)
     return cart
   }
 }
