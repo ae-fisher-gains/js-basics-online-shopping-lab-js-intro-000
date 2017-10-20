@@ -33,7 +33,7 @@ function viewCart() {
     var cartContains = [];
     var cartCost = [];
     for (var i = 0; i <= cart.length; i++) {
-      cartContains.push(Object.key(cart[i]));
+      cartContains.push(Object.keys(cart[i]));
   }
     for (var i = 0; i <= cartContains.length; i++) {
       cartCost.push(cartKeys[i]);
