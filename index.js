@@ -69,10 +69,13 @@ return cartTotal
 function removeFromCart(item) {
   var cartContains = [];
   var itemIndex = 0;
+  function identifyItem(element) {
+    return element == item
+  }
 for (var i = 0; i < cart.length; i++) {
   cartContains.push(Object.keys(cart[i]))
 }
-itemIndex = cartContains.indexOf([item])
+itemIndex = cartContain.findIndex(identifyItem);
   if (itemIndex !== -1) {
     cart.splice(itemIndex, 1)
     return cart
