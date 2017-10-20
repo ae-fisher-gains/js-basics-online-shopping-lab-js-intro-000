@@ -53,7 +53,7 @@ function viewCart() {
 function total() {
   var cartContains = [];
   var cartCost = [];
-  var cartTotal;
+  var cartTotal = 0;
 for (var i = 0; i < cart.length; i++) {
   cartContains.push(Object.keys(cart[i]))
 }
