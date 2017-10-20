@@ -30,7 +30,8 @@ function viewCart() {
   }
   //if cart has items
   else {
-    var cartContains = [], var cartCost = [];
+    var cartContains = [];
+    var cartCost = [];
   for (var i = 0; i < cart.length; i++) {
     cartContains.push(Object.keys(cart[i]))
   }
@@ -50,16 +51,19 @@ function viewCart() {
 }
 
 function total() {
-  var cartContains = [], cartCost = [], cartTotal;
+  var cartContains = [];
+  var cartCost = [];
+  var cartTotal;
 for (var i = 0; i < cart.length; i++) {
   cartContains.push(Object.keys(cart[i]))
 }
 for (var i = 0; i < cartContains.length; i++) {
   cartCost.push(cart[i][cartContains[i]])
 }
-for (var i = 0; i < cartContains.length; i++) {
-  cartTotal
+for (var i = 0; i < cartCost.length; i++) {
+  cartTotal += cartCost[i]
 }
+return cartTotal
 }
 
 function removeFromCart(item) {
