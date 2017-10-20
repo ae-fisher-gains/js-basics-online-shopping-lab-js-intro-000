@@ -75,7 +75,7 @@ function removeFromCart(item) {
 for (var i = 0; i < cart.length; i++) {
   cartContains.push(Object.keys(cart[i]))
 }
-itemIndex = cartContain.findIndex(identifyItem);
+itemIndex = cartContains.findIndex(identifyItem);
   if (itemIndex !== -1) {
     cart.splice(itemIndex, 1)
     return cart
