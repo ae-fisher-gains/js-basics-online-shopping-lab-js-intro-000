@@ -92,5 +92,7 @@ function placeOrder(cardNumber) {
     var totalCost = total()
     var cardCost = cardNumber
     console.log(`Your total cost is $${totalCost}, which will be charged to the card ${cardCost}.`)
+    cart = [];
+    return cart
   }
 }
