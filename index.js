@@ -72,7 +72,7 @@ function removeFromCart(item) {
 for (var i = 0; i < cart.length; i++) {
   cartContains.push(Object.keys(cart[i]))
 }
-  if (for (var i = 0; i < cartContains.length; i++) { if (cartContains[i] === item) {return true} else if (i === cartContains.length) {return false} else {}}) {
+  if (cartContains[0] === item || cartContains[1] === item || cartContains[2] === item) {
     console.log("That item is not in your cart.")
     return cart
   } else {
