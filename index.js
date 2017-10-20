@@ -68,11 +68,16 @@ return cartTotal
 
 function removeFromCart(item) {
   var cartContains = [];
+  var itemIndex = 0;
 for (var i = 0; i < cart.length; i++) {
   cartContains.push(Object.keys(cart[i]))
 }
   if (cartContains.hasOwnProperty(item) === false) {
     console.log("That item is not in your cart.")
+    return cart
+  } else {
+    itemIndex = cartContains.indexOf(item)
+    cart.splice(itemIndex, 1)
     return cart
   }
 }
