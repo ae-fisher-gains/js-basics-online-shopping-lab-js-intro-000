@@ -72,12 +72,12 @@ function removeFromCart(item) {
 for (var i = 0; i < cart.length; i++) {
   cartContains.push(Object.keys(cart[i]))
 }
-  if (cartContains[0] == item || cartContains[1] == item || cartContains[2] == item) {
-    console.log("That item is not in your cart.")
+itemIndex = cartContains.indexOf(item)
+  if (Number.isInteger(itemIndex)) {
+    cart.splice(itemIndex, 1)
     return cart
   } else {
-    itemIndex = cartContains.indexOf(item)
-    cart.splice(itemIndex, 1)
+    console.log("That item is not in your cart.")
     return cart
   }
 }
