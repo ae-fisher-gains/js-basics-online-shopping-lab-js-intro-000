@@ -34,11 +34,9 @@ function viewCart() {
     var cartCost = [];
     for (var item in cart) {
       cartContains.push(Object.keys(item))
-      return cartContains
     }
     for (var item in cartContains) {
       cartCost.push(cart[item])
-      return cartCost
     }
     console.log(`In your cart, you have ${cartContains[0]} at $${cartCost[0]}.`)
   }
