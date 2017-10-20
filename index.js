@@ -38,7 +38,13 @@ function viewCart() {
   for (var i = 0; i < cartContains.length; i++) {
     cartCost.push(cart[i][cartContains[i]])
   }
+  if (cartContains.length === 1) {
     console.log(`In your cart, you have ${cartContains[0]} at $${cartCost[0]}.`)
+  } else if (cartContains.length === 2) {
+    console.log(`In your cart, you have ${cartContains[0]} at $${cartCost[0]} and ${cartContains[1]} at $${cartCost[1]}.`)
+  } else {
+    console.log(`In your cart, you have ${cartContains[0]} at $${cartCost[0]}, ${cartContains[1]} at $${cartCost[1]}, and ${cartContains[2]} at $${cartCost[2]}.`)
+  }
   }
 }
 
