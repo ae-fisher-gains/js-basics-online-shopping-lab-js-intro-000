@@ -73,7 +73,7 @@ for (var i = 0; i < cart.length; i++) {
   cartContains.push(Object.keys(cart[i]))
 }
 itemIndex = cartContains.indexOf(item)
-  if (Number.isInteger(itemIndex)) {
+  if (typeof itemIndex == 'number') {
     cart.splice(itemIndex, 1)
     return cart
   } else {
